@@ -39,7 +39,7 @@
 import Logo from "@/assets/hgym2.png";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import styles from "./Footer.css"; // Adjust the path as needed
-import { SelectedPage } from "./types";
+
 
 const Footer = () => {
   return (
