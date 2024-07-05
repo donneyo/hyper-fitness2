@@ -1,4 +1,4 @@
-## Evogym
+## HyperGym
 
 This is a Gym website built using `TypeScript`, `React.js`, `Vite.js` and `Tailwind CSS`.
 
