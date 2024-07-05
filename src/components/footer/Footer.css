@@ -1,0 +1,12 @@
+/* Footer.module.css */
+.text-pink-600:hover {
+  color: #e1306c; /* Instagram color */
+}
+
+.text-blue-600:hover {
+  color: #3b5998; /* Facebook color */
+}
+
+.text-black:hover {
+  color: #010101; /* TikTok color */
+}
