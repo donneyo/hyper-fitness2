@@ -8,6 +8,7 @@ import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import styles from './Hero.module.css';
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -18,6 +19,7 @@ const Hero = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="home" className="gap-16 bg-slate-dark text-slate-white py-10 md:h-full md:pb-0">
+
       {/*Image and main header*/}
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
@@ -69,19 +71,22 @@ const Hero = ({ setSelectedPage }: Props) => {
       </motion.div>
 
       {/*Sponsors*/}
-      {isAboveMediumScreen && (
-        <div className="h-[150px] w-full bg-slate-dark py-10">
-          <div className="mx-auto w-5/6">
-            <div className="flex w-3/5 items-center justify-between gap-8">
-              <img alt="redbull-sponsor" src={SponsorRedBull} />
-              <img alt="forbes-sponsor" src={SponsorForbes} />
-              <img alt="fortune-sponsor" src={SponsorFortune} />
+            <div className="h-[150px] w-full bg-slate-dark py-10 overflow-hidden">
+              <div className="relative h-full">
+                <div className={`${styles.sponsorSlide} absolute h-full w-[300%] flex items-center`}>
+                  <img alt="redbull-sponsor" src={SponsorRedBull} className="h-12 md:h-4 mx-4 md:mx-8"/>
+                  <img alt="forbes-sponsor" src={SponsorForbes} className="h-4 md:h-4 mx-4 md:mx-8"/>
+                  <img alt="fortune-sponsor" src={SponsorFortune} className="h-4 md:h-4 mx-4 md:mx-8"/>
+                  <img alt="redbull-sponsor" src={SponsorRedBull} className="h-4 md:h-4 mx-4 md:mx-8"/>
+                  <img alt="forbes-sponsor" src={SponsorForbes} className="h-4 md:h-4 mx-4 md:mx-8"/>
+                  <img alt="fortune-sponsor" src={SponsorFortune} className="h-4 md:h-4 mx-4 md:mx-8"/>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
-    </section>
-  );
-};
+          </section>
+        );
+      };
+
 
 export default Hero;
+
